@@ -5,7 +5,7 @@ services:
     image: registry.cn-hangzhou.aliyuncs.com/log-service/logtail
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    environments:
+    environment:
       - ALIYUN_LOGTAIL_CONFIG=/etc/ilogtail/conf/${your_region_name}/ilogtail_config.json
       - ALIYUN_LOGTAIL_USER_ID=${your_aliyun_user_id}
       - ALIYUN_LOGTAIL_USER_DEFINED_ID=${your_machine_group_user_defined_id}
